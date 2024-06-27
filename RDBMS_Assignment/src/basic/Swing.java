@@ -111,7 +111,7 @@ class SwingDemo implements ActionListener {
 		fr.add(b5);
 		
 		b6 = new JButton("Refresh Table");
-		b6.setBounds(600, 420, 300, 20);
+		b6.setBounds(750, 420, 300, 20);
 		fr.add(b6);
 
 		b1.addActionListener(this);
@@ -124,7 +124,7 @@ class SwingDemo implements ActionListener {
 		b6.addActionListener(this);
 		
 		String[] columnNames = {"S.No","ID","Name","Gender","Address","Contact"};
-		Object [][] data = {{}};
+		Object [][] data = {{"new Integer(5)","new Integer(5)","Yogita","Female","Ahmedabad","7567405188"}};
 		
 		JTable table = new JTable(data,columnNames);
 		table.getTableHeader().setBounds(450, 100, 900, 20);

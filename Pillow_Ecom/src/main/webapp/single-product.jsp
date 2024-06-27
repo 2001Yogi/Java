@@ -35,6 +35,11 @@
                                 <div class="col-md-12 form-group p_star">
                                     <img src="image/<%=p.getImage()%>" height="100" width="100">
                                 </div>
+                                <div class="col-md-12 form-group">
+									<input type="file" class="form-control" id="name" name="image"
+									placeholder="Select Image" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Select Image'">
+								</div>
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="name" name="pname" value = "<%=p.getPname() %>"  >
                                 </div>

@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%
+	session.removeAttribute("data");
+	session.invalidate();
+	response.sendRedirect("seller-login.jsp");
+	%>
 </body>
 </html>

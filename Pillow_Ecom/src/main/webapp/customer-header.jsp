@@ -1,3 +1,9 @@
+<%@page import="dao.CartDao"%>
+<%@page import="model.Cart"%>
+<%@page import="dao.WishListDao"%>
+<%@page import="model.WishList"%>
+<%@page import="java.util.List"%>
+<%@page import="model.Customer"%>
 <%@page import="model.Customer"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -66,8 +72,9 @@ else{
                                         Product
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="customer-cart.jsp">Cart</a>
-                                        <a class="dropdown-item" href="wishlist.jsp">Wishlist</a>
+                                        <a class="dropdown-item" href="cart.jsp">Cart</a>
+                                        <%List<WishList> list1 = WishListDao.getWishListByCusId(c.getId()); %>
+                                        <a class="dropdown-item" href="wishlist.jsp">Wishlist&nbsp;&nbsp;(<%out.print(list1.size()); %>)</a>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
