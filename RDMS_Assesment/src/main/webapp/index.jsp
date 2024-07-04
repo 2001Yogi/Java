@@ -8,26 +8,58 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.jsp">Add Stock</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">View Stock</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Search Stock</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Edit Stock</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Delete Stock</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+hello
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.jsp">Add Stock</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">View Stock</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Search Stock</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Edit Stock</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Delete Stock</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="container ">
+		<div class="row mt-3">
+		<div class="col-3"></div>
+		<div class="col-6">
+			<form action="">
+			  <div class="mb-3 mt-5">
+			    <label for="product_id" class="form-label">Product ID:</label>
+			    <input type="number" class="form-control" id="product_id" placeholder="Enter Product ID" name="p_id">
+			  </div>
+			  <div class="mb-3 mt-3">
+			    <label for="product_name" class="form-label">Product Name:</label>
+			    <input type="text" class="form-control" id="product_name" placeholder="Enter Product Name" name="p_name">
+			  </div>
+			  <div class="mb-3 mt-3">
+			    <label for="product_price" class="form-label">Product Price:</label>
+			    <input type="text" class="form-control" id="product_price" placeholder="Enter Product Price" name="p_price">
+			  </div>
+			  <div class="mb-3 mt-3">
+			    <label for="product_quantity" class="form-label">Product Quantity:</label>
+			    <input type="text" class="form-control" id="product_quantity" placeholder="Enter Product Quantity" name="p_qty">
+			  </div>
+			  <div class="mb-3 mt-3">
+			    <label for="product_company" class="form-label">Product Company:</label>
+			    <input type="text" class="form-control" id="product_company" placeholder="Enter Product Company" name="p_com">
+			  </div>
+			  
+		  	<button type="submit" class="btn btn-primary" value="enter" name="action">Submit</button>
+			</form>
+		</div>
+		</div>
+	</div> -->
 </body>
 </html>

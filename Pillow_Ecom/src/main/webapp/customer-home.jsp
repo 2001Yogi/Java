@@ -29,7 +29,8 @@
     <section class="product_list section_padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+            <div class="col-md-1"></div>
+                <div class="col-md-8">
                     <div class="product_list">
                         <div class="row">
                         <%List<Product> list = ProductDao.getAllProducts(); %>
@@ -39,16 +40,16 @@
 									<%} %>
 						<%for(Product p : list){ %>
                             <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
+                                <div class="single_product_item ">
                                     <img src="image/<%=p.getImage() %>" alt="#" class="img-fluid">
                                     <h3> <a href="csingle-product.jsp?pid=<%=p.getPid()%>"><%=p.getPname() %></a> </h3>
                                     <p>Rs. <%=p.getPprice() %></p>
                                 </div>
-                                	<a href="CartController?action=addtocart&cusid=<%=c.getId()%>&pid=<%=p.getPid()%>"> 
-										<p>Add to Cart</p>
+                                	<a style="margin-top: -30px !important" href="CartController?action=addtocart&cusid=<%=c.getId()%>&pid=<%=p.getPid()%>"> 
+										<p style="margin-top: -30px !important">Add to Cart</p>
 									</a> 
-									<a href="WishListController?action=add&cusid=<%=c.getId()%>&pid=<%=p.getPid()%>"> 
-										<p>Add to Wishlist</p>
+									<a class="mb-2" href="WishListController?action=add&cusid=<%=c.getId()%>&pid=<%=p.getPid()%>"> 
+										<p class="mb-5">Add to Wishlist</p>
 									</a> 
                             </div>
                            

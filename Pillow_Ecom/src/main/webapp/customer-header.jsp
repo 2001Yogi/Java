@@ -32,6 +32,14 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+    .product_image_area {
+    margin-top: 0px !important;
+	}
+	.product_image_area .single_product_text p {
+    margin-top: 0px !important;
+    </style>
 </head>
 <body>
 <%
@@ -46,7 +54,7 @@ if(session.getAttribute("data")!=null){
 	c = (Customer)session.getAttribute("data");
 }
 else{
-	response.sendRedirect("seller-login.jsp");
+	response.sendRedirect("customer-login.jsp");
 }
 %>
 	<header class="main_menu home_menu">
@@ -72,7 +80,8 @@ else{
                                         Product
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="cart.jsp">Cart</a>
+                                    	<%List<Cart> list2 = CartDao.getCartListByCusId(c.getId()); %>
+                                        <a class="dropdown-item" href="cart.jsp">Cart&nbsp;&nbsp;(<%out.print(list2.size()); %>)</a>
                                         <%List<WishList> list1 = WishListDao.getWishListByCusId(c.getId()); %>
                                         <a class="dropdown-item" href="wishlist.jsp">Wishlist&nbsp;&nbsp;(<%out.print(list1.size()); %>)</a>
                                     </div>
@@ -100,7 +109,7 @@ else{
                 </div>
             </div>
         </div>
-        <div class="search_input" id="search_input_box">
+        <!-- <div class="search_input" id="search_input_box">
             <div class="container ">
                 <form class="d-flex justify-content-between search-inner">
                     <input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -108,7 +117,7 @@ else{
                     <span class="ti-close" id="close_search" title="Close Search"></span>
                 </form>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- Header part end-->
 

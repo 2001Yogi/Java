@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.CustomerDao;
+import dao.SellerDao;
 import model.Customer;
+import model.Seller;
 
 /**
  * Servlet implementation class CustomerController
@@ -76,6 +78,19 @@ public class CustomerController extends HttpServlet {
 				}
 			}
 		}
+		else if(action.equalsIgnoreCase("update")) {
+			Customer s = new Customer();
+			s.setId(Integer.parseInt(request.getParameter("id")));
+			s.setName(request.getParameter("name"));
+			s.setContact(Long.parseLong(request.getParameter("contact")));
+			s.setAddress(request.getParameter("address"));
+			s.setEmail(request.getParameter("email"));
+			CustomerDao.updateCustomerProfile(s);
+			HttpSession session = request.getSession();
+			session.setAttribute("data", s);
+			request.getRequestDispatcher("customer-home.jsp").forward(request, response);
+		}
+		
 	}
 
 }

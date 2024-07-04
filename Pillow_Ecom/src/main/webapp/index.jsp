@@ -85,6 +85,7 @@
                             <div class="col-lg-5 col-sm-6">
                                 <div class="single_product_content">
                                     <h5>Started from $10</h5>
+                         
                                     <h2> <a href="single-product.html">Printed memory foam 
                                             brief modern throw 
                                             pillow case</a> </h2>
