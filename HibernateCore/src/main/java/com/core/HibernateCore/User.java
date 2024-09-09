@@ -1,15 +1,27 @@
 package com.core.HibernateCore;
 
+import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name="user_data")
 public class User {
-	@Id 
+	@Id
+	@Column(name="user_id")
 	private int id;
 	private String name;
 	private long contact;
+	
+	
+	public User(int id, String name, long contact) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.contact = contact;
+	}
 	public int getId() {
 		return id;
 	}

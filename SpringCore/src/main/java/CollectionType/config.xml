@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="CollectionType.User" name="u1">
+		<property name="id" value="1"/>
+		<property name="name" value="java"/>
+		<property name="contact">
+			<list>
+				<value>7895874698</value>
+				<value>9683256932</value>
+				<value>8963145783</value>
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>ahmedabad</value>
+				<value>surat</value>
+				<value>rajkot</value>
+			</set>
+		</property>	
+		<property name="data">
+			<map>
+				<entry key="1" value="c++"/>
+				<entry key="2" value="php"/>
+				<entry key="3" value="ruby"/>
+			</map>
+		</property>
+	</bean>
+
+</beans>
